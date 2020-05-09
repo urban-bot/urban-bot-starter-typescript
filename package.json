@@ -8,7 +8,7 @@
   ],
   "scripts": {
     "build": "rimraf dist && tsc",
-    "start": "rimraf dist && tsc --watch",
+    "start": "rimraf dist && nodemon",
     "test": "jest",
     "lint": "eslint \"./src/**\"",
     "lint:fix": "npm run lint -- --fix",
