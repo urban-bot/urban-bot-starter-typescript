@@ -25,5 +25,5 @@ render(
     <Root bot={urbanBotSlack} parseMode="markdown">
         <App />
     </Root>,
-    () => console.log('slack bot started'),
+    () => console.log('slack bot is started'),
 );

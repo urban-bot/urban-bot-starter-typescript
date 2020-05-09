@@ -18,5 +18,5 @@ render(
     <Root bot={urbanBotTelegram} parseMode="HTML">
         <App />
     </Root>,
-    () => console.log('telegram bot started'),
+    () => console.log('telegram bot is started'),
 );
