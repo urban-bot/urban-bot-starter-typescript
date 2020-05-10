@@ -8,7 +8,8 @@
   ],
   "scripts": {
     "build": "rimraf dist && tsc",
-    "start": "rimraf dist && nodemon",
+    "start": "npm run build && node dist/index.js",
+    "dev": "rimraf dist && nodemon",
     "test": "jest",
     "lint": "eslint \"./src/**\"",
     "lint:fix": "npm run lint -- --fix",
