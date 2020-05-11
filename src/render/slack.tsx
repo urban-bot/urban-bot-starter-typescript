@@ -1,6 +1,6 @@
 import React from 'react';
-import { UrbanBotSlack } from 'urban-bot-slack';
-import { render, Root } from 'urban-bot';
+import { UrbanBotSlack } from '@urban-bot/slack';
+import { render, Root } from '@urban-bot/core';
 import dotenv from 'dotenv';
 import { App } from '../App';
 

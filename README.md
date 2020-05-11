@@ -13,7 +13,7 @@ Included:
 
 ## Launch
 ```
-$ git clone git@github.com:urban-bot/urban-bot-starter.git
+$ git clone https://github.com/urban-bot/urban-bot-starter.git
 $ cd urban-bot-starter
 $ rm -rf .git
 $ npm i

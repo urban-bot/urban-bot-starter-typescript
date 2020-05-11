@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Router, Text, ButtonGroup, Button, useText } from 'urban-bot';
+import { Route, Router, Text, ButtonGroup, Button, useText } from '@urban-bot/core';
 
 function Echo() {
     const [text, setText] = React.useState('Say something');

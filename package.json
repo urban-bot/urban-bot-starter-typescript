@@ -1,5 +1,5 @@
 {
-  "name": "urban-bot-starter",
+  "name": "@urban-bot/starter",
   "version": "0.0.1",
   "description": "Start write chatbots with urban-bot",
   "main": "dist/index.js",
@@ -40,13 +40,13 @@
   },
   "dependencies": {
     "react": "^16.13.1",
-    "urban-bot": "^0.0.1-aplha.24",
-    "urban-bot-slack": "^0.0.1-aplha.4",
-    "urban-bot-telegram": "^0.0.1-aplha.6"
+    "@urban-bot/core": "0.0.1",
+    "@urban-bot/slack": "0.0.1",
+    "@urban-bot/telegram": "0.0.1"
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:urban-bot/urban-bot-starter.git"
+    "url": "https://github.com/urban-bot/urban-bot-starter.git"
   },
   "engines": {
     "node": ">=10.0.0"
