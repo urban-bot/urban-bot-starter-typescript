@@ -43,7 +43,8 @@
     "react": "^16.13.1",
     "@urban-bot/core": "0.0.1",
     "@urban-bot/slack": "0.0.1",
-    "@urban-bot/telegram": "0.0.1"
+    "@urban-bot/telegram": "0.0.1",
+    "@urban-bot/facebook": "0.0.1"
   },
   "repository": {
     "type": "git",
