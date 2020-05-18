@@ -8,7 +8,7 @@
   ],
   "scripts": {
     "build": "rimraf dist && tsc",
-    "start": "npm run build && node dist/index.js",
+    "start": "npm run build && cross-env NODE_ENV=production node dist/index.js",
     "dev": "rimraf dist && nodemon",
     "test": "jest",
     "lint": "eslint \"./src/**\"",
@@ -36,7 +36,8 @@
     "prettier": "^2.0.5",
     "rimraf": "^3.0.2",
     "ts-jest": "^25.4.0",
-    "typescript": "^3.8.3"
+    "typescript": "^3.8.3",
+    "cross-env": "7.0.2"
   },
   "dependencies": {
     "react": "^16.13.1",
