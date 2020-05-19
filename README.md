@@ -16,6 +16,7 @@ Included:
 $ git clone https://github.com/urban-bot/urban-bot-starter.git
 $ cd urban-bot-starter
 $ rm -rf .git
+$ git init
 $ npm i
 ```
 Rename `.env.example` to `.env`
