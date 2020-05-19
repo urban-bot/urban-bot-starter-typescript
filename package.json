@@ -29,7 +29,8 @@
     "@urban-bot/telegram": "0.0.6",
     "cross-env": "^7.0.2",
     "dotenv": "^8.2.0",
-    "react": "^16.13.1"
+    "react": "^16.13.1",
+    "typescript": "^3.8.3"
   },
   "devDependencies": {
     "@types/jest": "^25.2.1",
