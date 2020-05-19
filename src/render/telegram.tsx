@@ -12,20 +12,21 @@ if (process.env.TELEGRAM_TOKEN === undefined) {
     throw new Error('Provide TELEGRAM_TOKEN to .env https://core.telegram.org/bots#6-botfather');
 }
 
-let options;
-if (isDevelopment) {
-    options = {
-        polling: true,
-    };
-} else {
-    options = {
-        webHook: {
-            port: process.env.PORT ? Number(process.env.PORT) : undefined,
-        },
-    };
+function getOptions(isDevelopment: boolean) {
+    if (isDevelopment) {
+        return {
+            polling: true,
+        };
+    } else {
+        return {
+            webHook: {
+                port: process.env.PORT ? Number(process.env.PORT) : undefined,
+            },
+        };
+    }
 }
 
-const urbanBotTelegram = new UrbanBotTelegram(process.env.TELEGRAM_TOKEN, options);
+const urbanBotTelegram = new UrbanBotTelegram(process.env.TELEGRAM_TOKEN, getOptions(isDevelopment));
 
 render(
     <Root bot={urbanBotTelegram}>
