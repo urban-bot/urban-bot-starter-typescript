@@ -8,7 +8,6 @@ Included:
 * **linter** - *eslint*
 * **code formatter** - *prettier*
 * **test** - *jest*
-* **pre-commit** - *husky & lint-staged*
 * **live reload** - *nodemon*
 
 ## Launch
