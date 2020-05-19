@@ -3,7 +3,6 @@ module.exports = {
     extends: [
         'eslint:recommended',
         'plugin:import/recommended',
-        'plugin:prettier/recommended',
         'plugin:react/recommended',
         'plugin:react-hooks/recommended',
         'plugin:jest/recommended',
@@ -25,12 +24,13 @@ module.exports = {
         jest: true,
     },
     rules: {
-        'react/prop-types': 0,
-        'no-unused-vars': 0,
-        '@typescript-eslint/no-unused-vars': [2, { varsIgnorePattern: '_.+', argsIgnorePattern: '_.+' }],
-        '@typescript-eslint/no-use-before-define': 0,
-        '@typescript-eslint/explicit-function-return-type': 0,
-        '@typescript-eslint/no-empty-function': 0,
+        'react/prop-types': 'off',
+        'no-unused-vars': 'off',
+        '@typescript-eslint/no-unused-vars': ['error', { varsIgnorePattern: '_.+', argsIgnorePattern: '_.+' }],
+        '@typescript-eslint/no-use-before-define': 'off',
+        '@typescript-eslint/explicit-function-return-type': 'off',
+        '@typescript-eslint/no-empty-function': 'off',
+        'prettier/prettier': 'warn',
     },
     settings: {
         'import/resolver': {
