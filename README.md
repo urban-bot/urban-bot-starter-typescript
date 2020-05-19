@@ -31,13 +31,13 @@ Rename `.env.example` to `.env`
  1. Create [slack app](https://slack.com/intl/en-ru/help/articles/115005265703-Create-a-bot-for-your-workspace)
  2. Paste [token](https://api.slack.com/authentication/token-types#granular_bot) to `.env` `SLACK_TOKEN=YOUR_TOKEN` 
  3. Paste [signing secret](https://api.slack.com/authentication/verifying-requests-from-slack#about) to `.env` `SLACK_SIGNING_SECRET=YOUR_SIGNING_SECRET`
- 4. Uncomment `// import './render/slack';` inside `src/index.ts` `
+ 4. Uncomment `// import './render/slack';` inside `src/index.ts`
  5. Run `npm run dev` and check your bot
  
  ### Facebook
  
   1. Create [facebook app](https://developers.facebook.com/docs/messenger-platform/getting-started/app-setup)
   2. Paste credentials to `.env`
-  3. Uncomment `// import './render/facebook';` inside `src/index.ts` `
+  3. Uncomment `// import './render/facebook';` inside `src/index.ts`
   4. Run `npm run dev` and check your bot
 
