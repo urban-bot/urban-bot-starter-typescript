@@ -6,23 +6,25 @@ import { App } from '../App';
 
 dotenv.config();
 
-if (process.env.SLACK_SIGNING_SECRET === undefined) {
+const { SLACK_SIGNING_SECRET, SLACK_TOKEN, PORT } = process.env;
+
+if (SLACK_SIGNING_SECRET === undefined) {
     throw new Error(
         'Provide SLACK_SIGNING_SECRET to .env https://api.slack.com/authentication/verifying-requests-from-slack#about',
     );
 }
 
-if (process.env.SLACK_TOKEN === undefined) {
+if (SLACK_TOKEN === undefined) {
     throw new Error('Provide SLACK_TOKEN to .env https://api.slack.com/authentication/token-types#granular_bot');
 }
 
 const urbanBotSlack = new UrbanBotSlack({
-    signingSecret: process.env.SLACK_SIGNING_SECRET,
-    token: process.env.SLACK_TOKEN,
+    signingSecret: SLACK_SIGNING_SECRET,
+    token: SLACK_TOKEN,
 });
 
 render(
-    <Root bot={urbanBotSlack} port={process.env.PORT ? Number(process.env.PORT) : undefined}>
+    <Root bot={urbanBotSlack} port={PORT ? Number(PORT) : undefined}>
         <App />
     </Root>,
     () => console.log('slack bot has started'),

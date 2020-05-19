@@ -6,22 +6,24 @@ import { App } from '../App';
 
 dotenv.config();
 
-if (process.env.FACEBOOK_APP_SECRET === undefined) {
+const { FACEBOOK_APP_SECRET, FACEBOOK_PAGE_ACCESS_TOKEN, FACEBOOK_VERIFY_TOKEN, PORT } = process.env;
+
+if (FACEBOOK_APP_SECRET === undefined) {
     throw new Error('Provide FACEBOOK_APP_SECRET to .env https://developers.facebook.com/apps/');
 }
 
-if (process.env.FACEBOOK_PAGE_ACCESS_TOKEN === undefined) {
+if (FACEBOOK_PAGE_ACCESS_TOKEN === undefined) {
     throw new Error('Provide FACEBOOK_PAGE_ACCESS_TOKEN to .env https://developers.facebook.com/apps/');
 }
 
 const urbanBotFacebook = new UrbanBotFacebook({
-    appSecret: process.env.FACEBOOK_APP_SECRET,
-    pageAccessToken: process.env.FACEBOOK_PAGE_ACCESS_TOKEN,
-    verifyToken: process.env.FACEBOOK_VERIFY_TOKEN,
+    appSecret: FACEBOOK_APP_SECRET,
+    pageAccessToken: FACEBOOK_PAGE_ACCESS_TOKEN,
+    verifyToken: FACEBOOK_VERIFY_TOKEN,
 });
 
 render(
-    <Root bot={urbanBotFacebook} isNewMessageEveryRender port={process.env.PORT ? Number(process.env.PORT) : undefined}>
+    <Root bot={urbanBotFacebook} isNewMessageEveryRender port={PORT ? Number(PORT) : undefined}>
         <App />
     </Root>,
     () => console.log('facebook bot has started'),
