@@ -19,11 +19,10 @@ if (process.env.SLACK_TOKEN === undefined) {
 const urbanBotSlack = new UrbanBotSlack({
     signingSecret: process.env.SLACK_SIGNING_SECRET,
     token: process.env.SLACK_TOKEN,
-    port: process.env.PORT ? Number(process.env.PORT) : undefined,
 });
 
 render(
-    <Root bot={urbanBotSlack}>
+    <Root bot={urbanBotSlack} port={process.env.PORT ? Number(process.env.PORT) : undefined}>
         <App />
     </Root>,
     () => console.log('slack bot has started'),

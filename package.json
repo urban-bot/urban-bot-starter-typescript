@@ -1,6 +1,6 @@
 {
   "name": "@urban-bot/starter",
-  "version": "0.0.3",
+  "version": "0.0.1",
   "description": "Start write chatbots with urban-bot",
   "main": "dist/index.js",
   "files": [
@@ -13,7 +13,8 @@
     "test": "jest",
     "lint": "eslint \"./src/**\"",
     "lint:fix": "npm run lint -- --fix",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "start-tunnel": "ngrok http 8080"
   },
   "license": "MIT",
   "devDependencies": {
@@ -37,14 +38,15 @@
     "rimraf": "^3.0.2",
     "ts-jest": "^25.4.0",
     "typescript": "^3.8.3",
-    "cross-env": "^7.0.2"
+    "cross-env": "^7.0.2",
+    "ngrok": "^3.2.7"
   },
   "dependencies": {
     "react": "^16.13.1",
-    "@urban-bot/core": "0.0.3",
-    "@urban-bot/slack": "0.0.3",
-    "@urban-bot/telegram": "0.0.3",
-    "@urban-bot/facebook": "0.0.3"
+    "@urban-bot/core": "0.0.6",
+    "@urban-bot/slack": "0.0.6",
+    "@urban-bot/telegram": "0.0.6",
+    "@urban-bot/facebook": "0.0.6"
   },
   "repository": {
     "type": "git",

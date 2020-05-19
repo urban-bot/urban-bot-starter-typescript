@@ -18,11 +18,10 @@ const urbanBotFacebook = new UrbanBotFacebook({
     appSecret: process.env.FACEBOOK_APP_SECRET,
     pageAccessToken: process.env.FACEBOOK_PAGE_ACCESS_TOKEN,
     verifyToken: process.env.FACEBOOK_VERIFY_TOKEN,
-    port: process.env.PORT ? Number(process.env.PORT) : undefined,
 });
 
 render(
-    <Root bot={urbanBotFacebook} isNewMessageEveryRender>
+    <Root bot={urbanBotFacebook} isNewMessageEveryRender port={process.env.PORT ? Number(process.env.PORT) : undefined}>
         <App />
     </Root>,
     () => console.log('facebook bot has started'),
