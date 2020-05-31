@@ -12,12 +12,8 @@ Included:
 
 ## Launch
 ```shell
-git clone https://github.com/urban-bot/urban-bot-starter.git
-cd urban-bot-starter
-rm -rf .git
-npm i
+npx create-urban-bot my-app
 ```
-Rename `.env.example` to `.env`
 
 ### Telegram
  1. Get telegram [token](https://core.telegram.org/bots#6-botfather)
