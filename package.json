@@ -16,7 +16,7 @@
     "dev": "nodemon",
     "lint": "eslint \"./src/**\"",
     "lint:fix": "npm run lint -- --fix",
-    "start": "npm run build && cross-env NODE_ENV=production node dist/index.js",
+    "start": "cross-env NODE_ENV=production node dist/index.js",
     "start-tunnel": "ngrok http 8080",
     "test": "jest",
     "typecheck": "tsc --noEmit"
