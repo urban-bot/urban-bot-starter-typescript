@@ -1,7 +1,7 @@
 
 # Urban Bot Starter
 
-Develop chatbots with zero configuration using TypeScript.
+Develop chatbots with zero configuration using typescript.
 
 ## Launch
 ```shell
