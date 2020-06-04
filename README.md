@@ -3,24 +3,6 @@
 
 Develop chatbots with zero configuration.
 
-### Scripts
-#### npm run build
-Build your code to `dist` folder.
-#### npm run dev
-Build and start your code after every code changes. Settings are inside `nodemon.json`.
-#### npm run lint
-Check code style. All rules are inside `.eslintrc`.
-#### npm run lint:fix
-Fix code style issues automatically including prettier formatting.
-#### npm run start
-Start code from `dist` folder.
-#### npm run start-tunnel
-Start a public URL for exposing your local server.
-#### npm run test
-Start your tests. File matching `*.test.(js|ts|tsx)`
-#### npm run typecheck
-Check typescript errors.
-
 ## Launch
 ```shell
 npx create-urban-bot my-app
@@ -47,3 +29,21 @@ npx create-urban-bot my-app
   3. Uncomment `// import './render/facebook';` inside `src/index.ts`
   4. Run `npm run dev` and check your bot
 
+
+### Scripts
+#### `npm run build`
+Build your code to `dist` folder.
+#### `npm run dev`
+Build and start your code after every code changes. Settings are inside `nodemon.json`.
+#### `npm run lint`
+Check code style. All rules are inside `.eslintrc`.
+#### `npm run lint:fix`
+Fix code style issues automatically including prettier formatting.
+#### `npm run start`
+Start code from `dist` folder.
+#### `npm run start-tunnel`
+Start a public URL for exposing your local server.
+#### `npm run test`
+Start your tests. File matching `*.test.(js|ts|tsx)`
+#### `npm run typecheck`
+Check typescript errors.
