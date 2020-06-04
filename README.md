@@ -30,7 +30,7 @@ npx create-urban-bot my-app
   4. Run `npm run dev` and check your bot
 
 
-### Scripts
+## Scripts
 #### `npm run build`
 Build your code to `dist` folder.
 #### `npm run dev`
