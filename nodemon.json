@@ -1,5 +1,5 @@
 {
     "watch": ["src"],
-    "ext": "ts,tsx,js",
-    "exec": "tsc && cross-env NODE_ENV=development node ./dist/index.js"
+    "ext": "ts,tsx,js,jsx",
+    "exec": "webpack --mode=development && node ./dist/index.js"
 }

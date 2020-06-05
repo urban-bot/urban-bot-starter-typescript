@@ -1,10 +1,10 @@
 {
-  "name": "@urban-bot/starter",
+  "name": "@urban-bot/starter-typescript",
   "version": "0.0.1",
-  "description": "Start write chatbots with urban-bot",
+  "description": "Start write chatbots with urban-bot and typescript",
   "repository": {
     "type": "git",
-    "url": "https://github.com/urban-bot/urban-bot-starter.git"
+    "url": "https://github.com/urban-bot/urban-bot-starter-typescript.git"
   },
   "license": "MIT",
   "main": "dist/index.js",
@@ -12,11 +12,11 @@
     "dist/**/*"
   ],
   "scripts": {
-    "build": "tsc",
+    "build": "webpack",
     "dev": "nodemon",
-    "lint": "eslint \"./src/**\"",
+    "lint": "eslint \"./src\" --ext \".js,.jsx\"",
     "lint:fix": "npm run lint -- --fix",
-    "start": "cross-env NODE_ENV=production node dist/index.js",
+    "start": "node dist/index.js",
     "start-tunnel": "ngrok http 8080",
     "test": "jest",
     "typecheck": "tsc --noEmit"
@@ -27,10 +27,13 @@
     "@urban-bot/facebook": "0.0.7",
     "@urban-bot/slack": "0.0.7",
     "@urban-bot/telegram": "0.0.7",
-    "cross-env": "^7.0.2",
     "dotenv": "^8.2.0",
+    "file-loader": "^6.0.0",
     "react": "^16.13.1",
-    "typescript": "^3.8.3"
+    "ts-loader": "^7.0.5",
+    "typescript": "^3.8.3",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11"
   },
   "devDependencies": {
     "@types/jest": "^25.2.1",
