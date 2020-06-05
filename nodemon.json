@@ -1,5 +1,0 @@
-{
-    "watch": ["src"],
-    "ext": "ts,tsx,js,jsx",
-    "exec": "webpack --mode=development && node ./dist/index.js"
-}
