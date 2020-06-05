@@ -1,31 +1,39 @@
-import React from 'react';
-import { Route, Router, Text, ButtonGroup, Button, useText } from '@urban-bot/core';
+import React, { useState } from 'react';
+import fs from 'fs';
+import { Route, Router, Text, ButtonGroup, Button, useText, Image } from '@urban-bot/core';
+import logo from './assets/logo.png';
 
 function Echo() {
-    const [text, setText] = React.useState('Say something');
+    const [text, setText] = useState('Say something');
 
     useText(({ text }) => {
         setText(text);
     });
 
     return (
-        <Text isNewMessageEveryRender>
+        <Text>
             <i>{text}</i>
         </Text>
     );
 }
 
-function Counter() {
-    const [count, setCount] = React.useState(0);
+function Logo() {
+    const [title, setTitle] = useState('Urban Bot');
 
-    const increment = () => setCount(count + 1);
-    const decrement = () => setCount(count - 1);
+    const addRobot = () => {
+        setTitle(title + '🤖');
+    };
 
     return (
-        <ButtonGroup title={count}>
-            <Button onClick={increment}>+1</Button>
-            <Button onClick={decrement}>-1</Button>
-        </ButtonGroup>
+        <Image
+            title={title}
+            file={fs.createReadStream(logo)}
+            buttons={
+                <ButtonGroup>
+                    <Button onClick={addRobot}>Add robot</Button>
+                </ButtonGroup>
+            }
+        />
     );
 }
 
@@ -35,8 +43,8 @@ export function App() {
             <Route path="/start">
                 <Echo />
             </Route>
-            <Route path="/counter">
-                <Counter />
+            <Route path="/logo">
+                <Logo />
             </Route>
         </Router>
     );
