@@ -8,13 +8,13 @@ dotenv.config();
 
 const { SLACK_SIGNING_SECRET, SLACK_TOKEN, PORT } = process.env;
 
-if (SLACK_SIGNING_SECRET === undefined) {
+if (!SLACK_SIGNING_SECRET) {
     throw new Error(
         'Provide SLACK_SIGNING_SECRET to .env https://api.slack.com/authentication/verifying-requests-from-slack#about',
     );
 }
 
-if (SLACK_TOKEN === undefined) {
+if (!SLACK_TOKEN) {
     throw new Error('Provide SLACK_TOKEN to .env https://api.slack.com/authentication/token-types#granular_bot');
 }
 

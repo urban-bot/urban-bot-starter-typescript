@@ -10,7 +10,7 @@ const { TELEGRAM_TOKEN, PORT } = process.env;
 
 const isDevelopment = process.env.NODE_ENV === 'development';
 
-if (TELEGRAM_TOKEN === undefined) {
+if (!TELEGRAM_TOKEN) {
     throw new Error('Provide TELEGRAM_TOKEN to .env https://core.telegram.org/bots#6-botfather');
 }
 
