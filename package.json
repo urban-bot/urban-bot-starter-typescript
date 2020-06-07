@@ -14,7 +14,7 @@
     "scripts": {
         "build": "webpack",
         "dev": "nodemon",
-        "lint": "eslint \"./src\" --ext \".js,.jsx\"",
+        "lint": "eslint \"./src\" --ext \".js,.jsx,.ts,.tsx\"",
         "lint:fix": "npm run lint -- --fix",
         "start": "node dist/index.js",
         "start-tunnel": "ngrok http 8080",
