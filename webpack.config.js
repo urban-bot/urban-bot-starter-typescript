@@ -17,8 +17,8 @@ module.exports = (env, argv) => ({
                 exclude: /node_modules/,
             },
             {
-                test: /\.(?!jsx?|tsx?).+$/i,
-                exclude: /node_modules/,
+                test: /.+/,
+                exclude: /node_modules|(\.(jsx?|tsx?)$)/,
                 use: [
                     {
                         loader: 'file-loader',
