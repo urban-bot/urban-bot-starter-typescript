@@ -39,13 +39,16 @@ function Logo() {
 
 export function App() {
     return (
-        <Router>
-            <Route path="/start">
-                <Echo />
-            </Route>
-            <Route path="/logo">
-                <Logo />
-            </Route>
-        </Router>
+        <>
+            <Text>Welcome to Urban Bot! Type /echo or /logo.</Text>
+            <Router>
+                <Route path="/echo">
+                    <Echo />
+                </Route>
+                <Route path="/logo">
+                    <Logo />
+                </Route>
+            </Router>
+        </>
     );
 }
