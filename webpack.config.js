@@ -1,4 +1,5 @@
 const path = require('path');
+const nodeExternals = require('webpack-node-externals');
 
 module.exports = (env, argv) => ({
     entry: './src/index.ts',
@@ -9,6 +10,7 @@ module.exports = (env, argv) => ({
     },
     devtool: argv.mode === 'development' ? 'eval-cheap-module-source-map' : undefined,
     plugins: [],
+    externals: [nodeExternals()],
     module: {
         rules: [
             {
