@@ -12,7 +12,7 @@ module.exports = {
     parserOptions: {
         ecmaVersion: 2020,
         sourceType: 'module',
-        project: './tsconfig-dev.json',
+        project: './tsconfig.json',
         tsconfigRootDir: '.',
         ecmaFeatures: {
             jsx: true,
