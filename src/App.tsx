@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import fs from 'fs';
 import { Route, Router, Text, ButtonGroup, Button, useText, Image } from '@urban-bot/core';
 import logo from './assets/logo.png';
 
@@ -27,7 +26,7 @@ function Logo() {
     return (
         <Image
             title={title}
-            file={fs.createReadStream(logo)}
+            file={logo}
             buttons={
                 <ButtonGroup>
                     <Button onClick={addRobot}>Add robot</Button>

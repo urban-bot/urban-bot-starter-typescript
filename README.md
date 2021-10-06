@@ -14,6 +14,12 @@ npx create-urban-bot my-app
  3. Uncomment `// import './render/telegram';` inside `src/index.ts` 
  4. Run `npm run dev` and check your bot
 
+### Discord
+1. Get discord [token](https://discord.com/developers/applications/PASTE_YOUR_ID/bot)
+2. Paste token to `.env` `DISCORD_TOKEN=YOUR_TOKEN`
+3. Uncomment `// import './render/discord';` inside `src/index.ts`
+4. Run `npm run dev` and check your bot
+
 ### Slack
 
  1. Create [slack app](https://slack.com/intl/en-ru/help/articles/115005265703-Create-a-bot-for-your-workspace)
@@ -59,7 +65,7 @@ import doc from './assets/document.doc';
 function App() {
   return (
     <>
-      <Image file={fs.createReadStream(image)} />
+      <Image file={image} />
       <File file={fs.readFileSync(doc)} />
     </>
   );
