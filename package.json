@@ -37,7 +37,7 @@
         "typescript": "^4.5.5",
         "webpack": "^5.21.2",
         "webpack-cli": "^4.5.0",
-        "webpack-node-externals": "^2.5.2"
+        "webpack-node-externals": "^3.0.0"
     },
     "devDependencies": {
         "@typescript-eslint/eslint-plugin": "^5.10.2",
