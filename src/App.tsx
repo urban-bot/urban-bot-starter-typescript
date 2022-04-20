@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import { Route, Router, Text, ButtonGroup, Button, useText, Image } from '@urban-bot/core';
+import fs from 'fs';
 import logo from './assets/logo.png';
+
+const file = fs.readFileSync(logo);
 
 function Echo() {
     const [text, setText] = useState('Say something');
@@ -26,7 +29,7 @@ function Logo() {
     return (
         <Image
             title={title}
-            file={logo}
+            file={file}
             buttons={
                 <ButtonGroup>
                     <Button onClick={addRobot}>Add robot</Button>
