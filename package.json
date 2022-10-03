@@ -30,7 +30,7 @@
         "@urban-bot/slack": "^0.3.8",
         "@urban-bot/telegram": "^0.3.8",
         "@urban-bot/discord": "^0.3.8",
-        "dotenv": "^8.2.0",
+        "dotenv": "^16.0.3",
         "file-loader": "^6.2.0",
         "react": "^16.14.0",
         "ts-loader": "^8.0.17",
