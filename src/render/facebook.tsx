@@ -1,4 +1,3 @@
-import React from 'react';
 import { UrbanBotFacebook } from '@urban-bot/facebook';
 import { render, Root } from '@urban-bot/core';
 import dotenv from 'dotenv';

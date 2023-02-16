@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Route, Router, Text, ButtonGroup, Button, useText, Image } from '@urban-bot/core';
 import fs from 'fs';
 import logo from './assets/logo.png';

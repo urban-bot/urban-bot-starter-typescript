@@ -12,7 +12,6 @@ module.exports = {
     parserOptions: {
         ecmaVersion: 2020,
         sourceType: 'module',
-        project: './tsconfig.json',
         tsconfigRootDir: '.',
         ecmaFeatures: {
             jsx: true,
@@ -31,6 +30,7 @@ module.exports = {
         '@typescript-eslint/explicit-function-return-type': 'off',
         '@typescript-eslint/no-empty-function': 'off',
         'prettier/prettier': 'warn',
+        'react/react-in-jsx-scope': 'off',
     },
     settings: {
         'import/resolver': {
